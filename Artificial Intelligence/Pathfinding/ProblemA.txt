@@ -1,0 +1,16 @@
+A) If there is no living reward/penalty, no noise, and no discount (gamma = 1), use your 
+common sense to find the best possible route from (1,1) to (5,5).
+
+Given (GAMMA = 1), there are two equally optimal paths, both jumping over the game over square: 
+
+Path 1: 
+(1,1,4) --> move_two --> (3,1,4) --> move_one --> (4,1,4) --> turn_left --> (4,1,1) 
+--> move_two --> (4,3,1) --> move_two --> (4,5,1) --> turn_right --> (4,5,4) --> move_one (Goal)
+
+Path 2: 
+(1,1,1) --> move_two --> (1,3,1) --> move_one --> (1,4,1) --> turn_right --> (1,4,4) 
+--> move_two --> (3,4,4) --> move_two --> (5,4,4) --> turn_left --> (5,4,1) --> move_one (Goal)
+
+The cost of both these paths is: 
+(2 + 1.5 + 0.5 + 2 + 2 + 0.5 + 1.5) = 10 (Minimum cost to reach goal state)
+
